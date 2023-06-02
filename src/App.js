@@ -4,6 +4,7 @@ import Albums from './components/Albums';
 import Nav from './components/Nav';
 import Posts from './components/Posts';
 import Users from './components/Users';
+import Post from './components/Post';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Nav></Nav>
       <Routes>
         <Route path='/' element={<Posts></Posts>}></Route>
+        <Route path='/:id' element={<Post></Post>}></Route>
         <Route path='/albums' element={<Albums></Albums>}></Route>
         <Route path='/users' element={<Users></Users>}></Route>
       </Routes>

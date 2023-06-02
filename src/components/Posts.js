@@ -13,7 +13,7 @@ const Posts = () => {
   return (
     <div className="p-4 flex flex-wrap justify-center w-full m-auto">
         {posts?.map((post) => (
-            <PostCard id={post.id} title={post.title} body={post.body}></PostCard>
+            <PostCard key={post.id} id={post.id} title={post.title} body={post.body}></PostCard>
         ))}
     </div>
   )
