@@ -1,9 +1,10 @@
 import { Navbar, Dropdown, Avatar } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <Navbar fluid rounded className="border-b-2">
-      <Navbar.Brand href="#">
+      <Navbar.Brand href="/">
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           MyReactApp
         </span>
@@ -34,11 +35,9 @@ const Nav = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link active href="#">
-          <p>Posts</p>
-        </Navbar.Link>
-        <Navbar.Link href="#">Albums</Navbar.Link>
-        <Navbar.Link href="#">Users</Navbar.Link>
+        <Link to="/"><Navbar.Link>Posts</Navbar.Link></Link>
+        <Link to="/albums"><Navbar.Link>Albums</Navbar.Link></Link>
+        <Link to="/users"><Navbar.Link>Users</Navbar.Link></Link>
       </Navbar.Collapse>
     </Navbar>
   );
